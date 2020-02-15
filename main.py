@@ -32,11 +32,7 @@ def generate_user(username):
 	if not username:
 		return 'Sorry error something, malformed request.'
 
-	return render_template('static/personal_user.html', user=username)
-
-@web_site.route('/page')
-def random_page():
-  return render_template('static/page.html', code=choice(number_list))
+	return render_template('personal_user.html', user=username)
 
 @web_site.route('/matches', defaults={'username': None})
 @web_site.route('/matches?<username>')
