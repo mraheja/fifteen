@@ -3871,12 +3871,12 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			#main > header {
-				padding: 5em 3em 3em 3em ;
+				padding: 5em 3em 3em 3em ; 
 			}
 
 				#main > header h2 {
 					font-size: 1.25em;
-					margin: 0 0 1em 0;
+					margin: 0em 0 1em 0;
 				}
 
 		}
