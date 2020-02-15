@@ -6,3 +6,4 @@ version = "0.0.0"
 [tool.poetry.dependencies]
 flask = "==1.0.2"
 python = "^3.7"
+networkx = "^2.4"

@@ -1,0 +1,39 @@
+FRONTEND
+- website
+  - front page - angel
+  - user login portal
+  - profile / interests entering
+- fake app
+
+BACKEND
+- website
+  - backend profile
+- matching algorithm
+- messaging engine
+- chatbot
+  - find things to chat about given interests
+
+DESIGN
+- logo
+- colour palette
+- illustration
+
+CONTENT
+- vision/ mission
+- what/ why/ how
+- (optional)user story
+
+OTHER
+ - a survey or something for interests
+  - General Questions (Name, location, year)
+  - Personality (multiple choice test)
+  - interests (free response)
+  - funny questions (more data, popular appeal)
+  - food interests?
+
+
+CURRENT TASKS
+  Angel - Front page, image assets
+  Lucy - Survey and survey -> data
+  Mehul - Matching algorithm
+  Alex - 
