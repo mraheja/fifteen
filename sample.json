@@ -6,13 +6,13 @@
         "zip code" : 94555,
         "gender" : "male",
         "year" : 1
-      }
+      },
       "personality" : {
         "extroversion" : 0.91,
         "sensing" : 0.32,
         "thinking" : 0.75,
-        "judging" : 0.04,
-      }
+        "judging" : 0.04
+      },
       "interests" : [1, 5, 8]
     }
   ]

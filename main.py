@@ -10,8 +10,18 @@ number_list = [
 ]
 
 @web_site.route('/')
+@web_site.route('/index.html')
+@web_site.route('/home')
 def index():
-	return render_template('index.html')
+  return open('templates/index.html').read()
+
+@web_site.route('/generic')
+def index2():
+  return open('templates/generic.html').read()
+
+@web_site.route('/elements')
+def elements():
+  return render_template('elements.html')
 
 @web_site.route('/user/', defaults={'username': None})
 @web_site.route('/user/<username>')
@@ -22,10 +32,26 @@ def generate_user(username):
 	if not username:
 		return 'Sorry error something, malformed request.'
 
-	return render_template('personal_user.html', user=username)
+	return render_template('static/personal_user.html', user=username)
 
 @web_site.route('/page')
 def random_page():
-  return render_template('page.html', code=choice(number_list))
+  return render_template('static/page.html', code=choice(number_list))
+
+@web_site.route('/matches', defaults={'username': None})
+@web_site.route('/matches?<username>')
+def matches(username):
+  if not username:
+ 		username = request.args.get('username')
+
+  # results = # some other method that returns a dictionary
+  # pass in user id, display match
+
+  return render_template('matches.html', header = username)
+
+@web_site.route('/base')
+def base():
+  return render_template('base.html')
+
 
 web_site.run(host='0.0.0.0', port=8080)

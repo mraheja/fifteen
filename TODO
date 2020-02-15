@@ -36,4 +36,27 @@ CURRENT TASKS
   Angel - Front page, image assets
   Lucy - Survey and survey -> data
   Mehul - Matching algorithm
-  Alex - 
+  Alex - sending data from json to page
+
+MEETING #1 (10ish minutes)
+Ideation - vision
+What symbols we like
+What our product stands for
+Concept of finished product
+
+
+TASKS TO FINISH IN-PERSON MEETING
+  Angel - Continue working on front page + banner design + configure main.css and html files
+  Lucy - Finish survey + sign-up + login + user profile
+  Alex - Finish base template/inheritance + Matches page
+  Mehul - Tie together survey and matches page
+
+TASKS TO DO MESSAGING
+  - Add chat window
+  - Add messaging bot to facilitate conversations (big data , machine learning!!!11!)
+  - messaging API????
+
+  
+NICE TO HAVES
+  - Geospatial visualization
+  - Maps with dots and pins
