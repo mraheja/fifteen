@@ -13,11 +13,11 @@ number_list = [
 @web_site.route('/index.html')
 @web_site.route('/home')
 def index():
-  return open('templates/index.html').read()
+  return render_template('index.html')
 
 @web_site.route('/generic')
 def index2():
-  return open('templates/generic.html').read()
+  return render_template('generic.html')
 
 @web_site.route('/elements')
 def elements():

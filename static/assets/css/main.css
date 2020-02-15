@@ -3454,7 +3454,7 @@ input, select, textarea {
 		width: 100%;
 		z-index: 10000;
 	}
-
+/* As far as I can tell, h1  is the nav block/menu block. */
 		#header h1 {
 			-moz-transition: opacity 0.2s ease;
 			-webkit-transition: opacity 0.2s ease;
@@ -3481,6 +3481,7 @@ input, select, textarea {
 					}
 
 				}
+/* h2 seems to be the block for page titles */
 
 		#header nav {
 			height: inherit;
@@ -3599,6 +3600,8 @@ input, select, textarea {
 			padding: 0.35em 1em;
 			position: relative;
 			z-index: 1;
+      /* height: 20px;
+      min-height: 15px; */
 		}
 
 			#banner h2:before, #banner h2:after {
@@ -3813,7 +3816,7 @@ input, select, textarea {
 /* Main */
 
 	#main > header {
-		padding: 12em 0 10em 0 ;
+		padding: 6em 0 2em 0 ;
 		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
 		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
 		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
