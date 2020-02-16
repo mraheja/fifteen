@@ -6,7 +6,8 @@
         "zipcode" : "94305",
         "gender" : "female",
         "year" : 2,
-        "bio" : "for the Rebellion!"
+        "bio" : "for the Rebellion!",
+        "image" : "static/images/leia.jpg"
       },
       "personality" : {
         "extroversion" : 0.91,
@@ -22,7 +23,8 @@
         "zipcode" : "94721",
         "gender" : "male",
         "year" : 2,
-        "bio" : "I bring balance to the Force."
+        "bio" : "I bring balance to the Force.",
+        "image" : "static/images/luke.jpg"
       },
       "personality" : {
         "extroversion" : 0.5,

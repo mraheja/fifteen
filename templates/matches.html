@@ -1,91 +1,36 @@
-{% extends "base.html" %}
+{% extends "base.html" %} 
 
 {% block content %}
-<!-- past and current are the two big dictionaries -->
+
 <article id="main">
 	<header>
-    {% if header %}
-  	<h2>{{ header }}</h2>
-    {% else %}
-    <h2>Matches</h2>
-    {% endif %}  
-		<p>Your new favorite people... or not</p>
-	</header>
-<!-- 
-""" 
-get_past_matches() returns a dictionary of a user's matches, which are
-individual dictionaries.
-Sample user data:
-    {
-      "general" : {
-        "name" : "John Smith",
-        "zip code" : 94555,
-        "gender" : "male",
-        "year" : 1
-      },
-      "personality" : {
-        "extroversion" : 0.91,
-        "sensing" : 0.32,
-        "thinking" : 0.75,
-        "judging" : 0.04
-      },
-      "interests" : [1, 5, 8]
-    }
-""" -->
-<!-- ADD TFOOT TO FIX SPACING -->
-  <article id="main">
-    <section class="wrapper style5">
-			<div class="inner">
+		<h2>Matches</h2>
+    <p>Your favorite people... or not.</p>
+  </header>
+  <section class="wrapper style5">
+	  <div class="inner">
 
-<iframe src="localhost:16558"></iframe>
-
-        <h2>Past Matches</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Match</th>
-              <th>Bio</th>
-            </tr>
-          </thead>
-        {% for match in past %}
-          <tbody>
-            <tr>
-              <th>{{ match.general.name }}</th>
-              <th>{{ match.general.bio }}</th>
-            </tr>
-          </tbody>
-          {% endfor %}
-        </table>
-
-        <h2>Today's Match</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Match</th>
-              <th>Bio</th>
-            </tr>
-          </thead>
-        {% for match in current %}
-          <tbody>
-            <tr>
-              <th>{{ match.general.name }}</th>
-              <th>{{ match.general.bio }}</th>
-            </tr>
-          </tbody>
-          {% endfor %}
-        </table>
-
+	<!-- Gallery -->
+	<div class="gallery style2 medium lightbox onscroll-fade-in">
+		<article>
+			<a href="static/images/pic05.jpg" class="image">
+				<img src="static/images/pic05.jpg" alt="" />
+			</a>
+			<div class="caption">
+		    <h3>Ipsum Dolor</h3>
+        <p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
+				<ul class="actions fixed">
+				  <li><span class="button small">Details</span></li>
+				</ul>
 			</div>
-    </section>
-  </article>
-  
-  <!-- <body>
-    {% for post in posts %}
-    <div><p>{{ post.author.username }} says: <b>{{ post.body }}</b></p></div>
-    {% endfor %}
-  </body> -->
+		</article>
+	</div>
 
-
+<iframe height='300px' width="500px" src="https://socket-io-chat-example--mraheja.repl.co/"></iframe>
+	  </div>
+  </section>
 </article>
+
+          
 
 {% endblock %}
