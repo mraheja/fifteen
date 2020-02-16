@@ -1759,7 +1759,7 @@ input, select, textarea {
 	}
 
 	header p {
-		color: rgba(255, 255, 255, 0.5);
+		color: red;
 		position: relative;
 		top: -0.25em;
 	}
