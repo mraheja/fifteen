@@ -3,9 +3,10 @@
     {
       "general" : {
         "name" : "Anakin Skywhopper",
-        "zip code" : "01451",
+        "zipcode" : "01451",
         "gender" : "male",
-        "year" : 1
+        "year" : 1,
+        "bio" : "GRRRRRRR"
       },
       "personality" : {
         "extroversion" : 0.03,

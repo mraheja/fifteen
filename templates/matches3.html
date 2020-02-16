@@ -11,20 +11,79 @@
     {% endif %}  
 		<p>Your new favorite people... or not</p>
 	</header>
+<!-- 
+""" 
+get_past_matches() returns a dictionary of a user's matches, which are
+individual dictionaries.
+Sample user data:
+    {
+      "general" : {
+        "name" : "John Smith",
+        "zip code" : 94555,
+        "gender" : "male",
+        "year" : 1
+      },
+      "personality" : {
+        "extroversion" : 0.91,
+        "sensing" : 0.32,
+        "thinking" : 0.75,
+        "judging" : 0.04
+      },
+      "interests" : [1, 5, 8]
+    }
+""" -->
+<!-- ADD TFOOT TO FIX SPACING -->
+  <article id="main">
+    <section class="wrapper style5">
+			<div class="inner">
 
-  <body>
-    <h1>Today's Match</h1>
-    {% for user in current %}
+<iframe src="localhost:16558"></iframe>
 
-    
-    <div><p>{{ user.author.username }} says: <b>{{ post.body }}</b></p></div>
-    {% endfor %}
-  </body>
-  <body>
+        <h2>Past Matches</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Match</th>
+              <th>Bio</th>
+            </tr>
+          </thead>
+        {% for match in past %}
+          <tbody>
+            <tr>
+              <th>{{ match.general.name }}</th>
+              <th>{{ match.general.bio }}</th>
+            </tr>
+          </tbody>
+          {% endfor %}
+        </table>
+
+        <h2>Today's Match</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Match</th>
+              <th>Bio</th>
+            </tr>
+          </thead>
+        {% for match in current %}
+          <tbody>
+            <tr>
+              <th>{{ match.general.name }}</th>
+              <th>{{ match.general.bio }}</th>
+            </tr>
+          </tbody>
+          {% endfor %}
+        </table>
+
+			</div>
+    </section>
+  </article>
+  
+  <!-- <body>
     {% for post in posts %}
     <div><p>{{ post.author.username }} says: <b>{{ post.body }}</b></p></div>
     {% endfor %}
-  </body>
+  </body> -->
 
 
 </article>

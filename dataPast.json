@@ -3,9 +3,10 @@
     {
       "general" : {
         "name" : "Leia Organic",
-        "zip code" : "94305",
+        "zipcode" : "94305",
         "gender" : "female",
-        "year" : 2
+        "year" : 2,
+        "bio" : "for the Rebellion!"
       },
       "personality" : {
         "extroversion" : 0.91,
@@ -18,9 +19,10 @@
     {
       "general" : {
         "name" : "Luke Skywhopper",
-        "zip code" : "94721",
+        "zipcode" : "94721",
         "gender" : "male",
-        "year" : 2
+        "year" : 2,
+        "bio" : "I bring balance to the Force."
       },
       "personality" : {
         "extroversion" : 0.5,
