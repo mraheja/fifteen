@@ -10,13 +10,13 @@ traits = ["extroversion","sensing","thinking","judging"]
 #Matching Cost Kernel
 def calculate_match(user_a, user_b):
   #Number of Matched Interests
-  sim_interests = 0
-  interests = set()
-  for interest in user_a['interests']:
-    interests.add(interest)
-  for interest in user_b['interests']:
-    if interest in interests:
-      sim_interests += 1
+  # sim_interests = 0
+  # interests = set()
+  # for interest in user_a['interests']:
+  #   interests.add(interest)
+  # for interest in user_b['interests']:
+  #   if interest in interests:
+  #     sim_interests += 1
 
   #Personality Squared Sum
   cost = 0
@@ -29,19 +29,41 @@ def calculate_match(user_a, user_b):
 
 #Matching Algorithm
 def find_matches(G):
-    pass
+    v = set()
+    matches = []
 
-with open('data.json') as json_file:
+    for edge in sorted(G.edges.data("weight")):
+        a = edge[0]
+        b = edge[1]
+        w = edge[2]
+        
+        if(a in v or b in v):
+            continue
+            
+        v.add(a)
+        v.add(b)
+        
+        matches.append((a,b))
 
-    data = json.load(json_file)
-    for user in data['users']:
-      G.add_node(user['general']['name'])
+    f = open('matches.txt','w')
+    for e in matches:
+      f.write(e[0],e[1])
+    f.close()
+    
+    return matches
 
-    for i in range(len(data['users'])):
-      for j in range(len(data['users'])):
-        if i == j:
-          continue
-        relation = calculate_match(data['users'][i],data['users'][j])
-        G.add_edge(data['users'][i]['general']['name'],data['users'][j]['general']['name'],weight=relation)
+def read_data():
+  with open('dataCurrent.json') as json_file:
 
-nx.draw_networkx(G,with_labels=True)
+      data = json.load(json_file)
+      for user in data['users']:
+        G.add_node(user['general']['name'])
+
+      for i in range(len(data['users'])):
+        for j in range(len(data['users'])):
+          if i == j:
+            continue
+          relation = calculate_match(data['users'][i],data['users'][j])
+          G.add_edge(data['users'][i]['general']['name'],data['users'][j]['general']['name'],weight=relation)
+
+

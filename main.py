@@ -1,7 +1,9 @@
 from flask import Flask, render_template, request, jsonify
 from flask_socketio import SocketIO, emit, join_room, leave_room
 from random import choice
+import json
 import matches
+import matching
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "HELLO"
@@ -44,6 +46,32 @@ def matches3():
   current_match = matches.get_current_match()
   return render_template('matches3.html', past=past_matches, current=current_match)
 
+@app.route('/survey',methods=['GET','POST'])
+def survey():
+  if request.method == "GET":
+    return render_template('survey.html')
+  else:
+    print(request.form)
+    f = open("dataCurrent.json")
+    data = json.load(f)
+    user = {}
+    user['general'] = {}
+    user['personality'] = {}
+    for section in request.form:
+      if (section == 'name') or (section == 'phone_number') or (section == 'email') or (section == 'year'):
+        user['general'][section] = request.form[section]
+      elif section == 'random':
+        pass
+      else:
+        if not section in user['personality']:
+          user['personality'][section] = 0
+        user['personality'][section] += int(request.form[section])/10
+    data["users"].append(user)
+    json.dump(data,open('dataCurrent.json', 'w'))
+
+    return render_template('generic.html')
+
+
 '''
 @app.route('/matches', defaults={'username': None})
 @app.route('/matches?<username>')
@@ -56,6 +84,10 @@ def matches(username):
 
   return render_template('matches.html', header = username)
 '''
+@app.route('/match')
+def match():
+  matching.read_data();
+  matching.find_matches()
 
 @app.route('/base')
 def base():
@@ -66,7 +98,7 @@ def about():
   return render_template('about.html')
   
 ## MESSAGING SERVICE
-
+'''
 channel_list = {"general": [] }
 present_channel = {"initial":"general"}
 
@@ -134,5 +166,5 @@ def on_join(room_to_join):
     print("joining room")
     join_room(room_to_join)
     emit("join channel ack", room=room_to_join)
-
+'''
 app.run(host='0.0.0.0', port=8080)

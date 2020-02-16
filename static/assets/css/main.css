@@ -87,7 +87,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #2e3842;
+		background: #f7c217; /*2e3842*/
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -177,8 +177,8 @@ input, select, textarea {
 		}
 
 	h2 {
-		font-size: 1.35em;
-		line-height: 1.75em;
+		font-size: 1.35em; /*1.35*/
+		line-height: 1.75em; /*1.75*/
 	}
 
 		@media screen and (max-width: 736px) {
@@ -1859,7 +1859,7 @@ input, select, textarea {
 		input[type="email"]:focus,
 		select:focus,
 		textarea:focus {
-			box-shadow: 0 0 0 2px #21b2a6;
+			box-shadow: 0 0 0 2px #3b8ccf;
 		}
 
 	select {
@@ -1949,7 +1949,7 @@ input, select, textarea {
 
 		input[type="checkbox"]:checked + label:before,
 		input[type="radio"]:checked + label:before {
-			background: #2e3842;
+			background: #f7c217; /*2e3842*/
 			color: #fff;
 			content: '\f00c';
 		}
@@ -2414,15 +2414,15 @@ input, select, textarea {
 		-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		background-color: transparent;
-		border-radius: 3px;
+		border-radius: 40px;
 		border: 0;
 		box-shadow: inset 0 0 0 2px #fff;
 		color: #fff;
 		cursor: pointer;
 		display: inline-block;
-		font-size: 0.8em;
+		font-size: 1.1em; /*0.8*/
 		font-weight: 600;
-		height: 3.125em;
+		height: 3.125em; /*3.125*/
 		letter-spacing: 0.225em;
 		line-height: 3.125em;
 		max-width: 30em;
@@ -2488,9 +2488,10 @@ input, select, textarea {
 		input[type="button"].primary,
 		button.primary,
 		.button.primary {
-			background-color: #ed4933;
+			background-color: #ffffff; /*button primary color*/
+      opacity: 0.62;
 			box-shadow: none !important;
-			color: #ffffff !important;
+			color: #707070 !important;
 		}
 
 			input[type="submit"].primary:hover,
@@ -2498,7 +2499,8 @@ input, select, textarea {
 			input[type="button"].primary:hover,
 			button.primary:hover,
 			.button.primary:hover {
-				background-color: #ef5e4a !important;
+				background-color: #ffffff !important; /*button hover color (lighter shade)*/
+        opacity: 0.42;
 			}
 
 			input[type="submit"].primary:active,
@@ -2818,7 +2820,7 @@ input, select, textarea {
 		}
 
 		.wrapper.style1 {
-			background-color: #21b2a6;
+			background-color: #3b8ccf;
 			color: #c8ece9;
 		}
 
@@ -2872,7 +2874,7 @@ input, select, textarea {
 
 				.wrapper.style1 select option {
 					color: #ffffff;
-					background: #21b2a6;
+					background: #3b8ccf;
 				}
 
 			.wrapper.style1 input[type="checkbox"] + label,
@@ -2888,7 +2890,7 @@ input, select, textarea {
 			.wrapper.style1 input[type="checkbox"]:checked + label:before,
 			.wrapper.style1 input[type="radio"]:checked + label:before {
 				background: #ffffff;
-				color: #21b2a6;
+				color: #3b8ccf;
 			}
 
 			.wrapper.style1 ::-webkit-input-placeholder {
@@ -2977,7 +2979,7 @@ input, select, textarea {
 			}
 
 		.wrapper.style2 {
-			background-color: #2e3842;
+			background-color: #f7c217; /*#2e3842*/
 		}
 
 		.wrapper.style3 {
@@ -3149,11 +3151,11 @@ input, select, textarea {
 		}
 
 			.wrapper.style5 strong, .wrapper.style5 b {
-				color: #2E3842;
+				color: #f7c217; /*#2E3842*/
 			}
 
 			.wrapper.style5 h2, .wrapper.style5 h3, .wrapper.style5 h4, .wrapper.style5 h5, .wrapper.style5 h6 {
-				color: #2E3842;
+				color: #f7c217; /*#2E3842*/
 			}
 
 			.wrapper.style5 hr {
@@ -3177,11 +3179,11 @@ input, select, textarea {
 			}
 
 			.wrapper.style5 header.major p {
-				color: #4E4852;
+				color: #3b8ccf; /*4E4852*/
 			}
 
 			.wrapper.style5 label {
-				color: #2E3842;
+				color: #f7c217; /*2E3842*/
 			}
 
 			.wrapper.style5 input[type="text"],
@@ -3197,13 +3199,13 @@ input, select, textarea {
 			}
 
 				.wrapper.style5 select option {
-					color: #2E3842;
+					color: #f7c217; /*#2E3842*/
 					background: #ffffff;
 				}
 
 			.wrapper.style5 input[type="checkbox"] + label,
 			.wrapper.style5 input[type="radio"] + label {
-				color: #4E4852;
+				color: #3b8ccf; /*4E4852*/
 			}
 
 				.wrapper.style5 input[type="checkbox"] + label:before,
@@ -3213,7 +3215,7 @@ input, select, textarea {
 
 			.wrapper.style5 input[type="checkbox"]:checked + label:before,
 			.wrapper.style5 input[type="radio"]:checked + label:before {
-				background: #2E3842;
+				background: #f7c217; /*2e3842*/
 				color: #ffffff;
 			}
 
@@ -3254,7 +3256,7 @@ input, select, textarea {
 				}
 
 			.wrapper.style5 table th {
-				color: #2E3842;
+				color: #f7c217; /*2e3842*/
 			}
 
 			.wrapper.style5 table thead {
@@ -3275,7 +3277,7 @@ input, select, textarea {
 			.wrapper.style5 button,
 			.wrapper.style5 .button {
 				box-shadow: inset 0 0 0 2px #dfdfdf;
-				color: #2E3842;
+				color: #f7c217; /*2e3842*/
 			}
 
 				.wrapper.style5 input[type="submit"]:hover,
@@ -3352,7 +3354,7 @@ input, select, textarea {
 		-ms-transition: -ms-transform 0.5s ease;
 		transition: transform 0.5s ease;
 		-webkit-overflow-scrolling: touch;
-		background: #21b2a6;
+		background: #3b8ccf;
 		color: #ffffff;
 		height: 100%;
 		max-width: 80%;
@@ -3446,7 +3448,7 @@ input, select, textarea {
 		-webkit-transition: background-color 0.2s ease;
 		-ms-transition: background-color 0.2s ease;
 		transition: background-color 0.2s ease;
-		background: #2e3842;
+		background: #f7c217; /*#2e3842 */
 		height: 3em;
 		left: 0;
 		line-height: 3em;
@@ -3596,7 +3598,7 @@ input, select, textarea {
 			-ms-transition: -ms-transform 0.5s ease, opacity 0.5s ease;
 			transition: transform 0.5s ease, opacity 0.5s ease;
 			display: inline-block;
-			font-size: 1.75em;
+			font-size: 2.75em;
 			opacity: 1;
 			padding: 0.35em 1em;
 			position: relative;
@@ -3633,8 +3635,9 @@ input, select, textarea {
 			}
 
 		#banner p {
-			letter-spacing: 0.225em;
-			text-transform: uppercase;
+      margin: -.7em 0 2em 0;
+			letter-spacing: 0.225em; /*0.225em*/
+			text-transform: lowercase; /*uppercase*/
 		}
 
 			#banner p a {
@@ -3682,7 +3685,7 @@ input, select, textarea {
 				display: block;
 				height: 1.5em;
 				left: 50%;
-				margin: 0 0 0 -0.75em;
+				margin: 0 0 0 -0.75em; /*0.75*/
 				position: absolute;
 				width: 1.5em;
 			}
@@ -3698,7 +3701,7 @@ input, select, textarea {
 			-ms-transition-delay: 1.25s;
 			transition-delay: 1.25s;
 			content: '';
-			background: #2e3842;
+			background: #f7c217; /*2e3842*/
 			display: block;
 			width: 100%;
 			height: 100%;
