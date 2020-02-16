@@ -2,8 +2,8 @@ COLOR
 - BLUE: #3b8ccf opacity: 0.4
 - GOLD: #f7c217 opacity: 0.4
 - Grey: #707070 opacity: 0.12
-- Blue (strong-weak): #f7c217; #fada72; #fdf0c3; #fef7e1
-- Gold (strong-weak): #3b8ccf; #87b9e2; #cde2f3; #e5f0f9
+- Gold (strong-weak): #f7c217; #fada72; #fdf0c3; #fef7e1
+- Blue (strong-weak): #3b8ccf; #87b9e2; #cde2f3; #e5f0f9
 
 FONT:
 - DOSIS: 

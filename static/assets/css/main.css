@@ -2079,7 +2079,7 @@ input, select, textarea {
 			}
 
 		.icon.style1 {
-			color: #00ffcc;
+			color: #fada72;
 		}
 
 		.icon.style2 {
@@ -2093,14 +2093,14 @@ input, select, textarea {
 /* Image */
 
 	.image {
-		border-radius: 3px;
+		border-radius: 3px; /*3px*/
 		border: 0;
 		display: inline-block;
 		position: relative;
 	}
 
 		.image img {
-			border-radius: 3px;
+			border-radius: 50%;
 			display: block;
 		}
 
@@ -2566,48 +2566,48 @@ input, select, textarea {
 		}
 
 			.features li:nth-child(1) {
-				background-color: rgba(0, 0, 0, 0.035);
+				background-color: rgba(0, 0, 0, 0.01);
 			}
 
 			.features li:nth-child(2) {
-				background-color: rgba(0, 0, 0, 0.07);
+				background-color: rgba(0, 0, 0, 0.02);
 			}
 
 			.features li:nth-child(3) {
-				background-color: rgba(0, 0, 0, 0.105);
+				background-color: rgba(0, 0, 0, 0.03);
 			}
 
 			.features li:nth-child(4) {
-				background-color: rgba(0, 0, 0, 0.14);
+				background-color: rgba(0, 0, 0, 0.04);
 			}
 
 			.features li:nth-child(5) {
-				background-color: rgba(0, 0, 0, 0.175);
+				background-color: rgba(0, 0, 0, 0.05);
 			}
 
 			.features li:nth-child(6) {
-				background-color: rgba(0, 0, 0, 0.21);
+				background-color: rgba(0, 0, 0, 0.06);
 			}
 
 			.features li:nth-child(7) {
-				background-color: rgba(0, 0, 0, 0.245);
+				background-color: rgba(0, 0, 0, 0.07);
 			}
 
 			.features li:nth-child(8) {
-				background-color: rgba(0, 0, 0, 0.28);
+				background-color: rgba(0, 0, 0, 0.08);
 			}
 
 			.features li:nth-child(9) {
-				background-color: rgba(0, 0, 0, 0.315);
+				background-color: rgba(0, 0, 0, 0.09);
 			}
 
 			.features li:nth-child(10) {
-				background-color: rgba(0, 0, 0, 0.35);
+				background-color: rgba(0, 0, 0, 0.1);
 			}
 
 			.features li:before {
 				display: block;
-				color: #00ffcc;
+				color: #fada72;
 				position: absolute;
 				left: 1.75em;
 				top: 2.75em;
@@ -4343,8 +4343,8 @@ input, select, textarea {
 		}
 
 		.wrapper.style3 {
-			background-color: #505393;
-			color: #d3d4e4;
+			background-color: #87b9e2;/* #505393; */
+			color: #ffffff;
 		}
 
 			.wrapper.style3 strong, .wrapper.style3 b {
@@ -4397,7 +4397,7 @@ input, select, textarea {
 
 				.wrapper.style3 select option {
 					color: #ffffff;
-					background: #505393;
+					background: #87b9e2;/*#505393;*/
 				}
 
 			.wrapper.style3 input[type="checkbox"] + label,
@@ -4413,7 +4413,7 @@ input, select, textarea {
 			.wrapper.style3 input[type="checkbox"]:checked + label:before,
 			.wrapper.style3 input[type="radio"]:checked + label:before {
 				background: #ffffff;
-				color: #505393;
+				color: #fdf0c3;/* #87b9e2; */
 			}
 
 			.wrapper.style3 ::-webkit-input-placeholder {
@@ -4511,11 +4511,11 @@ input, select, textarea {
 		}
 
 			.wrapper.style5 strong, .wrapper.style5 b {
-				color: #f7c217; /*#2E3842*/
+				color: #fdf0c3; /*#2E3842*/
 			}
 
 			.wrapper.style5 h2, .wrapper.style5 h3, .wrapper.style5 h4, .wrapper.style5 h5, .wrapper.style5 h6 {
-				color: #f7c217; /*#2E3842*/
+				color: #fdf0c3; /*#2E3842*/
 			}
 
 			.wrapper.style5 hr {
@@ -4539,11 +4539,11 @@ input, select, textarea {
 			}
 
 			.wrapper.style5 header.major p {
-				color: #3b8ccf; /*4E4852*/
+				color: #ffffff; /*4E4852*/
 			}
 
 			.wrapper.style5 label {
-				color: #f7c217; /*2E3842*/
+				color: #fdf0c3; /*2E3842*/
 			}
 
 			.wrapper.style5 input[type="text"],
@@ -4559,7 +4559,7 @@ input, select, textarea {
 			}
 
 				.wrapper.style5 select option {
-					color: #f7c217; /*#2E3842*/
+					color: #3b8ccf; /*#2E3842*/
 					background: #ffffff;
 				}
 
@@ -4575,7 +4575,7 @@ input, select, textarea {
 
 			.wrapper.style5 input[type="checkbox"]:checked + label:before,
 			.wrapper.style5 input[type="radio"]:checked + label:before {
-				background: #f7c217; /*2e3842*/
+				background: #3b8ccf; /*2e3842*/
 				color: #ffffff;
 			}
 
@@ -5206,8 +5206,8 @@ input, select, textarea {
 
 		#main > header p {
 			color: inherit;
-			letter-spacing: 0.225em;
-			text-transform: uppercase;
+			letter-spacing: 0.075em;
+			text-transform: lowercase;
 			top: 0;
 		}
 
@@ -5382,7 +5382,8 @@ input, select, textarea {
    border: 0;
    height: 100%;
    left: 0;
-   position: absolute;
+   right:30%;
+   position: relative;
    top: 0;
    width: 100%;
 }
@@ -5390,4 +5391,10 @@ input, select, textarea {
 /* 4x3 Aspect Ratio */
 .iframe-container-4x3 {
   padding-top: 75%;
+}
+
+.responsive {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%
 }

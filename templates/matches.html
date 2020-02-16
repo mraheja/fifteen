@@ -19,10 +19,12 @@
 					</header>
 
 					<ul class="features">
-            <li class="icon solid fa-laptop">
-				  		<h3>{{ current.general.name }}</h3>
-							<p>Bio: {{ current.general.bio }}</p>
-              <p>Interests: {{ current.general.interests }}</p>
+            <li class="icon solid fa-dove">
+              <div class="image" border-radius=50%><img src={{ current.general.image }} alt="" class="responsive" border-radius=50%/></div>                
+              </br>
+				  		<h3 align="center">{{ current.general.name }}</h3>
+							<p align="center">Bio: {{ current.general.bio }}</br>
+              Interests: {{ current.general.interests }}</p>
 					  </li>
             <li>
               <div class="iframe-container">
@@ -36,7 +38,7 @@
 
 <!--  -->
 <!-- # some sort of linked list garbage -->
-
+<p></p>
       <section id="three" class="wrapper style3 special">
 				<div class="inner">
 
@@ -46,16 +48,15 @@
 					</header>
 
 					<ul class="features">
-            <li class="icon solid fa-laptop">
-				  		<h3>{{ past.general.name }}</h3>
-							<p>Bio: {{ past.general.bio }}</p>
-              <p>Interests: {{ past.general.interests }}</p>
+
+            {% for user in past %}
+            <li class="icon solid fa-heart">
+              <div class="image" border-radius=50%><img src={{ user.general.image }} alt="" class="responsive" border-radius=50%/></div>   
+				  		<h3>{{ user.general.name }}</h3>
+							<p>Bio: {{ user.general.bio }}</br>
+              Interests: {{ user.general.interests }}</p>
 					  </li>
-            <li>
-              <div class="iframe-container">
-			  				<iframe src="https://socket-io-chat-example--mraheja.repl.co/"></iframe>
-              </div>
-            </li>
+            {% endfor %}
             
 					</ul>
 	  		</div>

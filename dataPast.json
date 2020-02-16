@@ -7,7 +7,7 @@
         "gender" : "female",
         "year" : 2,
         "bio" : "for the Rebellion!",
-        "image" : "static/images/Cauliflower.jpg"
+        "image" : "static/images/leia.jpg"
       },
       "personality" : {
         "extroversion" : 0.91,
@@ -16,91 +16,6 @@
         "judging" : 0.04
       },
       "interests" : [1, 5, 8]
-    },
-    {
-      "general" : {
-        "name" : "Luke Skywhopper",
-        "zipcode" : "94721",
-        "gender" : "male",
-        "year" : 2,
-        "bio" : "I bring balance to the Force.",
-        "image" : "static/images/luke.jpg"
-      },
-      "personality" : {
-        "extroversion" : 0.5,
-        "sensing" : 0.5,
-        "thinking" : 1,
-        "judging" : 1
-      },
-      "interests" : [2, 6, 3]
-    },
-    {
-      "general" : {
-        "name" : "Luke Skywhopper",
-        "zipcode" : "94721",
-        "gender" : "male",
-        "year" : 2,
-        "bio" : "I bring balance to the Force.",
-        "image" : "static/images/luke.jpg"
-      },
-      "personality" : {
-        "extroversion" : 0.5,
-        "sensing" : 0.5,
-        "thinking" : 1,
-        "judging" : 1
-      },
-      "interests" : [2, 6, 3]
-    },
-    {
-      "general" : {
-        "name" : "Luke Skywhopper",
-        "zipcode" : "94721",
-        "gender" : "male",
-        "year" : 2,
-        "bio" : "I bring balance to the Force.",
-        "image" : "static/images/luke.jpg"
-      },
-      "personality" : {
-        "extroversion" : 0.5,
-        "sensing" : 0.5,
-        "thinking" : 1,
-        "judging" : 1
-      },
-      "interests" : [2, 6, 3]
-    },
-    {
-      "general" : {
-        "name" : "Luke Skywhopper",
-        "zipcode" : "94721",
-        "gender" : "male",
-        "year" : 2,
-        "bio" : "I bring balance to the Force.",
-        "image" : "static/images/luke.jpg"
-      },
-      "personality" : {
-        "extroversion" : 0.5,
-        "sensing" : 0.5,
-        "thinking" : 1,
-        "judging" : 1
-      },
-      "interests" : [2, 6, 3]
-    },
-    {
-      "general" : {
-        "name" : "Luke Skywhopper",
-        "zipcode" : "94721",
-        "gender" : "male",
-        "year" : 2,
-        "bio" : "I bring balance to the Force.",
-        "image" : "static/images/luke.jpg"
-      },
-      "personality" : {
-        "extroversion" : 0.5,
-        "sensing" : 0.5,
-        "thinking" : 1,
-        "judging" : 1
-      },
-      "interests" : [2, 6, 3]
     },
     {
       "general" : {

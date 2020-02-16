@@ -28,8 +28,9 @@ def get_past_matches():
   past_matches = [user for user in jdata['users']]
   json_file.close()
   return past_matches
+  # return {"A","B","C"}
 
-def get_current_match(user): #user is a string
+def get_current_match(username): #user is a string
   json_matches = open('matches.json')
   match_data = json.load(json_matches)
   json_current = open('dataCurrent.json')
@@ -37,13 +38,13 @@ def get_current_match(user): #user is a string
 
   usr = None
   for dict in match_data['matches']:
-    if user == dict["person1"]:
+    if username == (dict["person1"]):
       usr = dict["person2"]
-    elif user == dict["person2"]:
+    elif username == (dict["person2"]):
       usr = dict["person1"]
   
-  for user in json_current['users'][0]:
-    if user.general.name.equals(user):
+  for user in current_data['users']:
+    if user["general"]["name"] == (usr):
       json_matches.close()
       json_current.close()
       return user
