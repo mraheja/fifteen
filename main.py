@@ -41,9 +41,9 @@ def generate_user(username):
 	return render_template('personal_user.html', user=username)
 
 @app.route('/matches')
-def matches():
+def matches(user="Luke Skywhopper"):
   past_matches = match_utils.get_past_matches()
-  current_match = match_utils.get_current_match()
+  current_match = match_utils.get_current_match(user)
   return render_template('matches.html', past=past_matches, current=current_match)
 
 @app.route('/survey',methods=['GET','POST'])

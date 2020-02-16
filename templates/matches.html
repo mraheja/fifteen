@@ -7,30 +7,67 @@
 		<h2>Matches</h2>
     <p>Your favorite people... or not.</p>
   </header>
+
   <section class="wrapper style5">
 	  <div class="inner">
+      <section id="three" class="wrapper style3 special">
+				<div class="inner">
 
-	<!-- Gallery -->
-	<div class="gallery style2 medium lightbox onscroll-fade-in">
-		<article>
-			<a href="static/images/pic05.jpg" class="image">
-				<img src="static/images/pic05.jpg" alt="" />
-			</a>
-			<div class="caption">
-		    <h3>Ipsum Dolor</h3>
-        <p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
-				<ul class="actions fixed">
-				  <li><span class="button small">Details</span></li>
-				</ul>
-			</div>
-		</article>
-	</div>
+					<header class="major">
+						<h2>Today's Match</h2>
+						<p>Feel free to talk! Your information is always anonymous until you choose otherwise. Have fun :)</p>
+					</header>
 
-<iframe height='300px' width="500px" src="https://socket-io-chat-example--mraheja.repl.co/"></iframe>
+					<ul class="features">
+            <li class="icon solid fa-laptop">
+				  		<h3>{{ current.general.name }}</h3>
+							<p>Bio: {{ current.general.bio }}</p>
+              <p>Interests: {{ current.general.interests }}</p>
+					  </li>
+            <li>
+              <div class="iframe-container">
+			  				<iframe src="https://socket-io-chat-example--mraheja.repl.co/"></iframe>
+              </div>
+            </li>
+            
+					</ul>
+	  		</div>
+  		</section>
+
+<!--  -->
+<!-- # some sort of linked list garbage -->
+
+      <section id="three" class="wrapper style3 special">
+				<div class="inner">
+
+					<header class="major">
+						<h2>Past Matches</h2>
+						<p>All your wonderful and not so wonderful experiences, all in one place.</p>
+					</header>
+
+					<ul class="features">
+            <li class="icon solid fa-laptop">
+				  		<h3>{{ past.general.name }}</h3>
+							<p>Bio: {{ past.general.bio }}</p>
+              <p>Interests: {{ past.general.interests }}</p>
+					  </li>
+            <li>
+              <div class="iframe-container">
+			  				<iframe src="https://socket-io-chat-example--mraheja.repl.co/"></iframe>
+              </div>
+            </li>
+            
+					</ul>
+	  		</div>
+  		</section>
+
+
+
+
+
 	  </div>
   </section>
 </article>
 
-          
 
 {% endblock %}
