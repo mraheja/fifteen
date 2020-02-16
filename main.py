@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, jsonify
 from flask_socketio import SocketIO, emit, join_room, leave_room
 from random import choice
 import json
-import matches
+import match_utils
 import matching
 
 app = Flask(__name__)
@@ -40,11 +40,11 @@ def generate_user(username):
 
 	return render_template('personal_user.html', user=username)
 
-@app.route('/matches3')
-def matches3():
-  past_matches = matches.get_past_matches()
-  current_match = matches.get_current_match()
-  return render_template('matches3.html', past=past_matches, current=current_match)
+@app.route('/matches')
+def matches():
+  past_matches = match_utils.get_past_matches()
+  current_match = match_utils.get_current_match()
+  return render_template('matches.html', past=past_matches, current=current_match)
 
 @app.route('/survey',methods=['GET','POST'])
 def survey():
