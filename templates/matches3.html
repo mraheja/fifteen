@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- past and current are the two big dictionaries -->
+<article id="main">
+	<header>
+    {% if header %}
+  	<h2>{{ header }}</h2>
+    {% else %}
+    <h2>Matches</h2>
+    {% endif %}  
+		<p>Your new favorite people... or not</p>
+	</header>
+
+  <body>
+    <h1>Today's Match</h1>
+    {% for user in current %}
+
+    
+    <div><p>{{ user.author.username }} says: <b>{{ post.body }}</b></p></div>
+    {% endfor %}
+  </body>
+  <body>
+    {% for post in posts %}
+    <div><p>{{ post.author.username }} says: <b>{{ post.body }}</b></p></div>
+    {% endfor %}
+  </body>
+
+
+</article>
+
+{% endblock %}

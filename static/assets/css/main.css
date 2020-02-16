@@ -1,5 +1,5 @@
 @import url(fontawesome-all.min.css);
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic");
+@import url("https://fonts.google.com/specimen/Dosis?selection.family=Dosis:400,400italic,600,600italic,800,800italic");
 
 /*
 	Spectral by HTML5 UP
@@ -87,7 +87,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #3b8ccf;
+		background: #2e3842;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -103,7 +103,7 @@ input, select, textarea {
 
 	body, input, select, textarea {
 		color: #fff;
-		font-family: "Open Sans", Helvetica, sans-serif;
+		font-family: 'Dosis', sans-serif;
 		font-size: 15pt;
 		font-weight: 400;
 		letter-spacing: 0.075em;
@@ -249,9 +249,9 @@ input, select, textarea {
 	}
 
 	code {
-		background: rgba(144, 144, 144, 0.25);
+		background: rgba(243, 243, 243, 0.25);
 		border-radius: 3px;
-		font-family: "Courier New", monospace;
+		font-family: 'Dosis', sans-serif;
 		font-size: 0.9em;
 		letter-spacing: 0;
 		margin: 0 0.25em;
@@ -260,7 +260,7 @@ input, select, textarea {
 
 	pre {
 		-webkit-overflow-scrolling: touch;
-		font-family: "Courier New", monospace;
+		font-family: 'Dosis', sans-serif;
 		font-size: 0.9em;
 		margin: 0 0 2em 0;
 	}
@@ -1956,7 +1956,8 @@ input, select, textarea {
 
 		input[type="checkbox"]:focus + label:before,
 		input[type="radio"]:focus + label:before {
-			box-shadow: 0 0 0 2px #21b2a6;
+			box-shadow: 0 0 0 2px #f7c217;
+      opacity: 0.6
 		}
 
 	input[type="checkbox"] + label:before {
@@ -3817,16 +3818,23 @@ input, select, textarea {
 
 	#main > header {
 		padding: 6em 0 2em 0 ; /* This line changes the heading height on generic pages */
-		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+		background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.04), rgba(0,0,0,0.04)), url("../../images/banner.jpg");
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.04), rgba(0,0,0,0.04)), url("../../images/banner.jpg");
+		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.04), rgba(0,0,0,0.04)), url("../../images/banner.jpg");
+		background-image: linear-gradient(top, rgba(0,0,0,0.04), rgba(0,0,0,0.04)), url("../../images/banner.jpg");
 		background-attachment: fixed;
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: cover;
 		text-align: center;
 	}
+    
+    /* #main > header h1 {
+      background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.04), rgba(0,0,0,0.04)), url("../../images/indexbanner.png");
+		  background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.04), rgba(0,0,0,0.04)), url("../../images/indexbanner.png");
+		  background-image: -ms-linear-gradient(top, rgba(0,0,0,0.04), rgba(0,0,0,0.04)), url("../../images/indexbanner.png");
+		  background-image: linear-gradient(top, rgba(0,0,0,0.04), rgba(0,0,0,0.04)), url("../../images/indexbanner.png");
+    } */
 
 		#main > header h2 {
 			font-size: 1.75em;
@@ -3967,10 +3975,10 @@ input, select, textarea {
 /* Landing */
 
 	body.landing #page-wrapper {
-		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.04), rgba(0,0,0,0.04)), url("../../images/indexbanner.png");
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.04), rgba(0,0,0,0.04)), url("../../images/indexbanner.png");
+		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.04), rgba(0,0,0,0.04)), url("../../images/indexbanner.png");
+		background-image: linear-gradient(top, rgba(0,0,0,0.04), rgba(0,0,0,0.04)), url("../../images/indexbanner.png");
 		background-attachment: fixed;
 		background-position: center center;
 		background-repeat: no-repeat;
@@ -3988,10 +3996,10 @@ input, select, textarea {
 
 	body.is-mobile.landing #banner,
 	body.is-mobile.landing .wrapper.style4 {
-		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.04), rgba(0,0,0,0.04)), url("../../images/indexbanner.png");
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.04), rgba(0,0,0,0.04)), url("../../images/indexbanner.png");
+		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.04), rgba(0,0,0,0.04)), url("../../images/indexbanner.png");
+		background-image: linear-gradient(top, rgba(0,0,0,0.04), rgba(0,0,0,0.04)), url("../../images/indexbanner.png");
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: cover;

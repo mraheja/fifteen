@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "general" : {
+        "name" : "Anakin Skywhopper",
+        "zip code" : "01451",
+        "gender" : "male",
+        "year" : 1
+      },
+      "personality" : {
+        "extroversion" : 0.03,
+        "sensing" : 1.0,
+        "thinking" : 0.05,
+        "judging" : 0.3
+      },
+      "interests" : [2, 6, 12]
+    }
+  ]
+}

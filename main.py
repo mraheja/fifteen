@@ -37,6 +37,12 @@ def generate_user(username):
 
 	return render_template('personal_user.html', user=username)
 
+@app.route('/matches3')
+def matches3():
+  past_matches = matches.get_past_matches()
+  current_match = matches.get_current_match()
+  return render_template('matches3.html', past=past_matches, current=current_match)
+
 '''
 @app.route('/matches', defaults={'username': None})
 @app.route('/matches?<username>')
@@ -57,6 +63,7 @@ def base():
 @app.route('/about')
 def about():
   return render_template('about.html')
+  
 ## MESSAGING SERVICE
 
 channel_list = {"general": [] }
@@ -93,6 +100,7 @@ def create_channel(new_channel):
 
 @socketio.on("send message")
 def send_message(message_data):
+    print(message_data)
     channel = message_data["current_channel"]
     channel_message_count = len(channel_list[channel])
     del message_data["current_channel"]

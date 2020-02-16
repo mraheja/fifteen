@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "general" : {
+        "name" : "Leia Organic",
+        "zip code" : "94305",
+        "gender" : "female",
+        "year" : 2
+      },
+      "personality" : {
+        "extroversion" : 0.91,
+        "sensing" : 0.32,
+        "thinking" : 0.75,
+        "judging" : 0.04
+      },
+      "interests" : [1, 5, 8]
+    },
+    {
+      "general" : {
+        "name" : "Luke Skywhopper",
+        "zip code" : "94721",
+        "gender" : "male",
+        "year" : 2
+      },
+      "personality" : {
+        "extroversion" : 0.5,
+        "sensing" : 0.5,
+        "thinking" : 1,
+        "judging" : 1
+      },
+      "interests" : [2, 6, 3]
+    }
+  ]
+}
