@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import json
 import numpy as np
 
-G=nx.Graph()
+
 
 traits = ["extroversion","sensing","thinking","judging"]
 
@@ -45,16 +45,24 @@ def find_matches(G):
         
         matches.append((a,b))
 
-    f = open('matches.txt','w')
+    dictt = {}
+    match = []
+    
     for e in matches:
-      f.write(e[0],e[1])
-    f.close()
+      dicttt = {}
+      dicttt['person1'] = e[0]
+      dicttt['person2'] = e[1]
+      match.append(dicttt)
+
+    dictt['matches'] = match
+
+    json.dump(dictt,open('matches.json','w'))
     
     return matches
 
 def read_data():
   with open('dataCurrent.json') as json_file:
-
+      G=nx.Graph()
       data = json.load(json_file)
       for user in data['users']:
         G.add_node(user['general']['name'])
@@ -65,5 +73,6 @@ def read_data():
             continue
           relation = calculate_match(data['users'][i],data['users'][j])
           G.add_edge(data['users'][i]['general']['name'],data['users'][j]['general']['name'],weight=relation)
+      return G
 
 

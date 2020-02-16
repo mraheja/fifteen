@@ -65,7 +65,8 @@ def survey():
       else:
         if not section in user['personality']:
           user['personality'][section] = 0
-        user['personality'][section] += int(request.form[section])/10
+        if request.form[section]:
+          user['personality'][section] += int(request.form[section])/10
     data["users"].append(user)
     json.dump(data,open('dataCurrent.json', 'w'))
 
@@ -86,8 +87,9 @@ def matches(username):
 '''
 @app.route('/match')
 def match():
-  matching.read_data();
-  matching.find_matches()
+  G = matching.read_data();
+  matching.find_matches(G)
+  return "DONE MATCHING"
 
 @app.route('/base')
 def base():
