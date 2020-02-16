@@ -1,7 +1,10 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
+from flask_socketio import SocketIO, emit, join_room, leave_room
 from random import choice
 
-web_site = Flask(__name__)
+app = Flask(__name__)
+app.config["SECRET_KEY"] = "HELLO"
+socketio = SocketIO(app)
 
 number_list = [
 	100, 101, 200, 201, 202, 204, 206, 207, 300, 301, 302, 303, 304, 305, 307, 400, 401, 402, 403, 404, 405, 406, 408, 409, 410, 411, 412, 413, 414, 415,
@@ -9,22 +12,22 @@ number_list = [
 	429, 431, 444, 450, 451, 500, 502, 503, 504, 506, 507, 508, 509, 510, 511, 599
 ]
 
-@web_site.route('/')
-@web_site.route('/index.html')
-@web_site.route('/home')
+@app.route('/')
+@app.route('/index.html')
+@app.route('/home')
 def index():
   return render_template('index.html')
 
-@web_site.route('/generic')
+@app.route('/generic')
 def index2():
   return render_template('generic.html')
 
-@web_site.route('/elements')
+@app.route('/elements')
 def elements():
   return render_template('elements.html')
 
-@web_site.route('/user/', defaults={'username': None})
-@web_site.route('/user/<username>')
+@app.route('/user/', defaults={'username': None})
+@app.route('/user/<username>')
 def generate_user(username):
 	if not username:
 		username = request.args.get('username')
@@ -34,8 +37,9 @@ def generate_user(username):
 
 	return render_template('personal_user.html', user=username)
 
-@web_site.route('/matches', defaults={'username': None})
-@web_site.route('/matches?<username>')
+'''
+@app.route('/matches', defaults={'username': None})
+@app.route('/matches?<username>')
 def matches(username):
   if not username:
  		username = request.args.get('username')
@@ -44,10 +48,82 @@ def matches(username):
   # pass in user id, display match
 
   return render_template('matches.html', header = username)
+'''
 
-@web_site.route('/base')
+@app.route('/base')
 def base():
   return render_template('base.html')
 
+@app.route('/about')
+def about():
+  return render_template('about.html')
+## MESSAGING SERVICE
 
-web_site.run(host='0.0.0.0', port=8080)
+channel_list = {"general": [] }
+present_channel = {"initial":"general"}
+
+@app.route("/matches", methods=["POST", "GET"])
+def match():
+    if request.method == "GET":
+        # Pass channel list to, and use jinja to display already created channels
+        return render_template("matches.html", channel_list=channel_list)
+    elif request.method == "POST":
+        channel = request.form.get("channel_name")
+        #user = request.form.get("username")
+        user = "mehul"
+
+        # Adding a new channel
+        if channel and (channel not in channel_list):
+            channel_list[channel] = []
+            return jsonify({"success": True})
+        # Switching to a different channel
+        elif channel in channel_list:
+            # send channel specific data to client i.e. messages, who sent them, and when they were sent
+            # send via JSON response and then render with JS
+            print(f"Switch to {channel}")
+            present_channel[user] = channel
+            channel_data = channel_list[present_channel[user]]
+            return jsonify(channel_data)
+        else:
+            return jsonify({"success": False})
+
+@socketio.on("create channel")
+def create_channel(new_channel):
+    emit("new channel", new_channel, broadcast=True)
+
+@socketio.on("send message")
+def send_message(message_data):
+    channel = message_data["current_channel"]
+    channel_message_count = len(channel_list[channel])
+    del message_data["current_channel"]
+    channel_list[channel].append(message_data)
+    message_data["deleted_message"] = False
+    if(channel_message_count >= 100):
+        del channel_list[channel][0]
+        message_data["deleted_message"] = True
+    emit("recieve message", message_data, broadcast=True, room=channel)
+
+@socketio.on("delete channel")
+def delete_channel(message_data):
+    channel = message_data["current_channel"]
+    user = message_data["user"]
+    present_channel[user] = "general"
+    del message_data["current_channel"]
+    del channel_list[channel]
+    channel_list["general"].append(message_data)
+    message_data = {"data": channel_list["general"], "deleted_channel": channel}
+    emit("announce channel deletion", message_data, broadcast=True)
+
+@socketio.on("leave")
+def on_leave(room_to_leave):
+    print("leaving room")
+    leave_room(room_to_leave)
+    emit("leave channel ack", room=room_to_leave)
+
+@socketio.on("join")
+def on_join(room_to_join):
+    print("joining room")
+    join_room(room_to_join)
+    emit("join channel ack", room=room_to_join)
+
+app.run(host='0.0.0.0', port=8080)
